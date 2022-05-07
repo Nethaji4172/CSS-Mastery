@@ -8,7 +8,7 @@ Experimenting all kinds CSS design and animation in this repo
   <img src="https://nethajees.com/my-works/other-images/css/CSS_001.JPG" /> </a>
   
   
-# 001 360 Degree Image Rotation
+# 002 360 Degree Image Rotation
 <a href="https://nethajees.com/my-works/Tutorials/online-tutorials/002_360-degree-image-rotation-in-html5-&-CSS-Only_22-10-2020/index.html" >  
   Line here to view this project in browser
   
