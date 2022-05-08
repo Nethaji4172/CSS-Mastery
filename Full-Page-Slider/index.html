@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Full Page Slider With Html CSS and JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Products.</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section class="banner">
+        <div class="imgBx">
+            <img src="https://nethajees.com/my-works/Tutorials/online-tutorials/003_Full-Page-Slider-With-Html-CSS-and-JavaScript-Make-Simple-Products-Slider-with-Next-Prev-Button_23-10-20202/img1.jpg" alt="Image" class="active">
+            <img src="https://nethajees.com/my-works/Tutorials/online-tutorials/003_Full-Page-Slider-With-Html-CSS-and-JavaScript-Make-Simple-Products-Slider-with-Next-Prev-Button_23-10-20202/img2.jpg" alt="Image">
+            <img src="https://nethajees.com/my-works/Tutorials/online-tutorials/003_Full-Page-Slider-With-Html-CSS-and-JavaScript-Make-Simple-Products-Slider-with-Next-Prev-Button_23-10-20202/img3.jpg" alt="Image">
+            <img src="https://nethajees.com/my-works/Tutorials/online-tutorials/003_Full-Page-Slider-With-Html-CSS-and-JavaScript-Make-Simple-Products-Slider-with-Next-Prev-Button_23-10-20202/img4.jpg" alt="Image">
+        </div>
+        <div class="contentBx">
+            <div class="active">
+                <h2>Slide Text One</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sequi earum eos molestias. Beatae eos nisi sunt eum eveniet error reprehenderit.</p>
+                <a href="#">Details</a>
+            </div>
+            <div class="">
+                <h2>Slide Text Two</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sequi earum eos molestias. Beatae eos nisi sunt eum eveniet error reprehenderit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sequi earum eos molestias.</p>
+                <a href="#">Details</a>
+            </div>
+            <div class="">
+                <h2>Slide Text Three</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sequi earum eos molestias. Beatae eos nisi sunt eum eveniet error reprehenderit. consectetur adipisicing elit. Voluptas sequi earum eos molestias.</p>
+                <a href="#">Details</a>
+            </div>
+            <div class="">
+                <h2>Slide Text Four</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas sequi earum eos molestias.</p>
+                <a href="#">Details</a>
+            </div>
+        </div>
+        <ul class="controls">
+            <li onclick="prevSlide();prevSlideText()"></li>
+            <li onclick="nextSlide();nextSlideText()"></li>
+        </ul>
+    </section>
+    
+    <script type="text/javascript">
+        const imgBx = document.querySelector('.imgBx');
+        const slides = imgBx.getElementsByTagName('img');
+        var i = 0;
+        
+        
+        function nextSlide(){
+            slides[i].classList.remove('active');
+            i = (i + 1) % slides.length;
+            slides[i].classList.add('active');
+        }
+        function prevSlide(){
+            slides[i].classList.remove('active');
+            i = (i - 1 + slides.length) % slides.length;
+            slides[i].classList.add('active');
+        }
+        
+        const contentBx = document.querySelector('.contentBx');
+        const slidesText = contentBx.getElementsByTagName('div');
+        var j = 0;
+        
+        
+        function nextSlideText(){
+            slidesText[j].classList.remove('active');
+            j = (j + 1) % slidesText.length;
+            slidesText[j].classList.add('active');
+        }
+        function prevSlideText(){
+            slidesText[j].classList.remove('active');
+            j = (j - 1 + slidesText.length) % slidesText.length;
+            slidesText[j].classList.add('active');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
