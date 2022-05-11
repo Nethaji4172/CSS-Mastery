@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Direction-Aware Image Hover Effects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <span></span>
+            <div class="imgBx"><img src="image-01.jpg" alt=""></div>
+            <div class="content">
+                <div class="">
+                    <h2>Card title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident accusamus laudantium fugiat, id error, iste praesentium totam sit minima libero.</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <span></span>
+            <div class="imgBx"><img src="image-02.jpg" alt=""></div>
+            <div class="content">
+                <div class="">
+                    <h2>Card title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident accusamus laudantium fugiat, id error, iste praesentium totam sit minima libero.</p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <span></span>
+            <div class="imgBx"><img src="image-03.jpg" alt=""></div>
+            <div class="content">
+                <div class="">
+                    <h2>Card title</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident accusamus laudantium fugiat, id error, iste praesentium totam sit minima libero.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+    
+    <script>
+        $(document).ready(function(){
+           $('.card').on('mouseenter',function(e){
+               x = e.pageX - $(this).offset().left,
+               y = e.pageY - $(this).offset().top;
+               $(this).find('span').css({top:y, left:x})
+           })
+             $('.card').on('mouseout',function(e){
+               x = e.pageX - $(this).offset().left,
+               y = e.pageY - $(this).offset().top;
+               $(this).find('span').css({top:y, left:x})
+           })
+        });
+    </script>
+    
+    
+</body>
+</html>
